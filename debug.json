@@ -1,0 +1,552 @@
+{
+  "module": {
+    "funcs": {
+      "funcTable": [
+        {
+          "function": {
+            "name": "fib",
+            "args": [
+              {
+                "variable": {
+                  "name": "n",
+                  "type": {
+                    "baseType": "int"
+                  }
+                }
+              }
+            ],
+            "returnType": {
+              "baseType": "int"
+            },
+            "statement": {
+              "multiStatement": [
+                {
+                  "declareStatement": {
+                    "name": "a",
+                    "type": {
+                      "baseType": "int"
+                    },
+                    "expression": {
+                      "group": [
+                        {
+                          "number": 0
+                        }
+                      ]
+                    }
+                  }
+                },
+                {
+                  "declareStatement": {
+                    "name": "b",
+                    "type": {
+                      "baseType": "int"
+                    },
+                    "expression": {
+                      "group": [
+                        {
+                          "number": 1
+                        }
+                      ]
+                    }
+                  }
+                },
+                {
+                  "forStatement": {
+                    "init": {
+                      "declareStatement": {
+                        "name": "i",
+                        "type": {
+                          "baseType": "int"
+                        },
+                        "expression": {
+                          "group": [
+                            {
+                              "number": 0
+                            }
+                          ]
+                        }
+                      }
+                    },
+                    "test": {
+                      "group": [
+                        {
+                          "lessThan": {
+                            "left": {
+                              "identifier": "i"
+                            },
+                            "right": {
+                              "identifier": "n"
+                            }
+                          }
+                        }
+                      ]
+                    },
+                    "inc": {
+                      "expressionStatement": {
+                        "group": [
+                          {
+                            "assign": {
+                              "left": {
+                                "identifier": "i"
+                              },
+                              "right": {
+                                "add": {
+                                  "left": {
+                                    "identifier": "i"
+                                  },
+                                  "right": {
+                                    "number": 1
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        ]
+                      }
+                    },
+                    "statement": {
+                      "multiStatement": [
+                        {
+                          "declareStatement": {
+                            "name": "c",
+                            "type": {
+                              "baseType": "int"
+                            },
+                            "expression": {
+                              "group": [
+                                {
+                                  "add": {
+                                    "left": {
+                                      "identifier": "a"
+                                    },
+                                    "right": {
+                                      "identifier": "b"
+                                    }
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        },
+                        {
+                          "expressionStatement": {
+                            "group": [
+                              {
+                                "assign": {
+                                  "left": {
+                                    "identifier": "a"
+                                  },
+                                  "right": {
+                                    "identifier": "b"
+                                  }
+                                }
+                              }
+                            ]
+                          }
+                        },
+                        {
+                          "expressionStatement": {
+                            "group": [
+                              {
+                                "assign": {
+                                  "left": {
+                                    "identifier": "b"
+                                  },
+                                  "right": {
+                                    "identifier": "c"
+                                  }
+                                }
+                              }
+                            ]
+                          }
+                        }
+                      ]
+                    }
+                  }
+                },
+                {
+                  "returnStatement": {
+                    "group": [
+                      {
+                        "function call": {
+                          "ident": {
+                            "identifier": "toVal"
+                          },
+                          "args": {
+                            "group": [
+                              {
+                                "identifier": "b"
+                              }
+                            ]
+                          }
+                        }
+                      }
+                    ]
+                  }
+                }
+              ]
+            }
+          }
+        },
+        {
+          "function": {
+            "name": "main",
+            "args": [],
+            "returnType": {
+              "baseType": "void"
+            },
+            "statement": {
+              "multiStatement": [
+                {
+                  "expressionStatement": {
+                    "group": [
+                      {
+                        "function call": {
+                          "ident": {
+                            "identifier": "print"
+                          },
+                          "args": {
+                            "group": [
+                              {
+                                "function call": {
+                                  "ident": {
+                                    "identifier": "fib"
+                                  },
+                                  "args": {
+                                    "group": [
+                                      {
+                                        "number": 10
+                                      }
+                                    ]
+                                  }
+                                }
+                              }
+                            ]
+                          }
+                        }
+                      }
+                    ]
+                  }
+                }
+              ]
+            }
+          }
+        },
+        {
+          "function": {
+            "name": "toVal",
+            "args": [
+              {
+                "variable": {
+                  "name": "a",
+                  "type": {
+                    "refType": {
+                      "baseType": "int"
+                    }
+                  }
+                }
+              }
+            ],
+            "returnType": {
+              "baseType": "int"
+            },
+            "statement": {
+              "multiStatement": [
+                {
+                  "returnStatement": {
+                    "group": [
+                      {
+                        "number": 0
+                      }
+                    ]
+                  }
+                }
+              ]
+            }
+          }
+        },
+        {
+          "function": {
+            "name": "__op_set",
+            "args": [
+              {
+                "variable": {
+                  "name": "a",
+                  "type": {
+                    "refType": {
+                      "baseType": "int"
+                    }
+                  }
+                }
+              },
+              {
+                "variable": {
+                  "name": "b",
+                  "type": {
+                    "baseType": "int"
+                  }
+                }
+              }
+            ],
+            "returnType": {
+              "baseType": "int"
+            },
+            "statement": {
+              "multiStatement": [
+                {
+                  "returnStatement": {
+                    "group": [
+                      {
+                        "number": 0
+                      }
+                    ]
+                  }
+                }
+              ]
+            }
+          }
+        },
+        {
+          "function": {
+            "name": "__op_set",
+            "args": [
+              {
+                "variable": {
+                  "name": "a",
+                  "type": {
+                    "refType": {
+                      "baseType": "int"
+                    }
+                  }
+                }
+              },
+              {
+                "variable": {
+                  "name": "b",
+                  "type": {
+                    "refType": {
+                      "baseType": "int"
+                    }
+                  }
+                }
+              }
+            ],
+            "returnType": {
+              "baseType": "int"
+            },
+            "statement": {
+              "multiStatement": [
+                {
+                  "returnStatement": {
+                    "group": [
+                      {
+                        "number": 0
+                      }
+                    ]
+                  }
+                }
+              ]
+            }
+          }
+        },
+        {
+          "function": {
+            "name": "__op_lt",
+            "args": [
+              {
+                "variable": {
+                  "name": "a",
+                  "type": {
+                    "refType": {
+                      "baseType": "int"
+                    }
+                  }
+                }
+              },
+              {
+                "variable": {
+                  "name": "b",
+                  "type": {
+                    "refType": {
+                      "baseType": "int"
+                    }
+                  }
+                }
+              }
+            ],
+            "returnType": {
+              "baseType": "bool"
+            },
+            "statement": {
+              "multiStatement": [
+                {
+                  "returnStatement": {
+                    "group": [
+                      {
+                        "boolean": false
+                      }
+                    ]
+                  }
+                }
+              ]
+            }
+          }
+        },
+        {
+          "function": {
+            "name": "__op_add",
+            "args": [
+              {
+                "variable": {
+                  "name": "a",
+                  "type": {
+                    "refType": {
+                      "baseType": "int"
+                    }
+                  }
+                }
+              },
+              {
+                "variable": {
+                  "name": "b",
+                  "type": {
+                    "baseType": "int"
+                  }
+                }
+              }
+            ],
+            "returnType": {
+              "baseType": "int"
+            },
+            "statement": {
+              "multiStatement": [
+                {
+                  "returnStatement": {
+                    "group": [
+                      {
+                        "number": 0
+                      }
+                    ]
+                  }
+                }
+              ]
+            }
+          }
+        },
+        {
+          "function": {
+            "name": "__op_add",
+            "args": [
+              {
+                "variable": {
+                  "name": "a",
+                  "type": {
+                    "refType": {
+                      "baseType": "int"
+                    }
+                  }
+                }
+              },
+              {
+                "variable": {
+                  "name": "b",
+                  "type": {
+                    "refType": {
+                      "baseType": "int"
+                    }
+                  }
+                }
+              }
+            ],
+            "returnType": {
+              "baseType": "int"
+            },
+            "statement": {
+              "multiStatement": [
+                {
+                  "returnStatement": {
+                    "group": [
+                      {
+                        "number": 0
+                      }
+                    ]
+                  }
+                }
+              ]
+            }
+          }
+        },
+        {
+          "function": {
+            "name": "print",
+            "args": [
+              {
+                "variable": {
+                  "name": "a",
+                  "type": {
+                    "baseType": "int"
+                  }
+                }
+              }
+            ],
+            "returnType": {
+              "baseType": "void"
+            },
+            "statement": {
+              "multiStatement": []
+            }
+          }
+        }
+      ]
+    },
+    "structs": {
+      "structTable": {
+        "float": {
+          "name": "float",
+          "fields": []
+        },
+        "int": {
+          "name": "int",
+          "fields": []
+        },
+        "bool": {
+          "name": "bool",
+          "fields": []
+        },
+        "void": {
+          "name": "void",
+          "fields": []
+        },
+        "vec": {
+          "name": "vec",
+          "fields": [
+            {
+              "variable": {
+                "name": "x",
+                "type": {
+                  "baseType": "float"
+                }
+              }
+            },
+            {
+              "variable": {
+                "name": "y",
+                "type": {
+                  "baseType": "float"
+                }
+              }
+            },
+            {
+              "variable": {
+                "name": "z",
+                "type": {
+                  "baseType": "float"
+                }
+              }
+            }
+          ]
+        }
+      }
+    }
+  }
+}

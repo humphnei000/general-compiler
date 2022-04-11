@@ -1,0 +1,21 @@
+func toVal: int(a: int&) {return 0;}
+func __op_set: int(a: int&, b: int) {return 0;}
+func __op_set: int(a: int&, b: int&) {return 0;}
+func __op_lt: bool(a: int&, b: int&) {return false;}
+func __op_add: int(a: int&, b: int) {return 0;}
+func __op_add: int(a: int&, b: int&) {return 0;}
+
+func print: void(a: int) {}
+func print: void(a: string) {}
+
+struct float {}
+struct int {}
+struct bool {}
+struct void {} //this is the only one that makes sense as filler
+struct string {}
+
+struct vec {
+    x: float;
+    y: float;
+    z: float;
+}
